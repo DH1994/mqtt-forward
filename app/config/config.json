@@ -16,8 +16,8 @@
     "destination": {
         "host": "mqtt://mqtt.meshnet.nl",
         "options": {
-            "username": "rfo",
-            "password": "rfonly"
+            "username": "",
+            "password": ""
         }
     }
 }
