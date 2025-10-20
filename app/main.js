@@ -1,8 +1,6 @@
 const fs = require('fs');
 const mqtt = require("mqtt");
 
-let config;
-
 fs.readFile("config/config.json", "utf-8", (err, data) => {
     if (err) {
         console.log(err);
@@ -10,7 +8,7 @@ fs.readFile("config/config.json", "utf-8", (err, data) => {
     }
 
 
-    config = JSON.parse(data);
+    let config = JSON.parse(data);
     console.log(config);
 
     const clientSource = mqtt.connect(config.source.host, config.source.options);
